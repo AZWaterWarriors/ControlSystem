@@ -11,6 +11,8 @@
 
 int main(int argc, char *argv[]){
 
+	if(setupio() != 0){ return 1; };
+	
 	for(;;){
 
 		fans(1);
