@@ -16,6 +16,9 @@ void fans(int onoff);
 void peltier(int onoff);
 void fans2(int onoff);
 
+void writepin(int pin, int value);
+int readpin(int pin);
+
 int gpiofd;
 unsigned int *gpio;
 
@@ -30,20 +33,36 @@ int setupio(){
 
 };
 
+void writepin(int pin, int value){
+
+	gpio[(pin > 9)] = 1;
+	
+	gpio[(10 - (value * 3))] = (1<<(pin));
+
+};
+
+void readpin(int pin){
+
+	gpio[(pin > 9)] = 0;
+	
+	return (gpio[13] & (1<<(pin)));
+
+};
+
 void fans(int onoff){
 
-
+	writepin(FAN_PIN, onoff);
 
 };
 
 void peltier(int onoff){
 
-
+	writepin(PELT_PIN, onoff);
 
 };
 
 void fans2(int onoff){
 
-
+	writepin(FAN2_PIN, onoff);
 
 };
