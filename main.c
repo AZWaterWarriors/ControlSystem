@@ -6,9 +6,23 @@
 
 #include <stdio.h>
 
+#include "harvester.h"
+
 int main(int argc, char *argv[]){
 
-	printf("Hello World!\n");
+	for(;;){
+
+		fans(1);
+		sleep(CYC_ABSORB);
+		fans(0);
+
+		peltier(1);
+		fans2(1);
+		sleep(CYC_DEHYDR);
+		peltier(0);
+		fans2(0);
+
+	};
 	
 	return 0;
 
