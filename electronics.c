@@ -7,3 +7,25 @@
  */
 
 #include "electronics.h"
+
+void fans(int onoff);
+void peltier(int onoff);
+void fans2(int onoff);
+
+void fans(int onoff){
+
+
+
+};
+
+void peltier(int onoff){
+
+
+
+};
+
+void fans2(int onoff){
+
+
+
+};
