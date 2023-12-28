@@ -9,6 +9,10 @@
 #ifndef _ELECTRONICS_H
 #define _ELECTRONICS_H
 
+#define FAN_PIN
+#define PELT_PIN
+#define FAN2_PIN
+
 int setupio(void);
 void fans(int onoff);
 void peltier(int onoff);
