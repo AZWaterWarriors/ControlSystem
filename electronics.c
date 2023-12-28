@@ -21,7 +21,7 @@ unsigned int *gpio;
 
 int setupio(){
 
-  gpiofd = open("/dev/gpiomem", O_RDWR);
+	gpiofd = open("/dev/gpiomem", O_RDWR);
 	if (gpiofd < 0) { return -1; };
 
 	gpio = (unsigned int *)mmap(0, 4096, PROT_READ+PROT_WRITE, MAP_SHARED, gpiofd, 0);
