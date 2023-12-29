@@ -6,7 +6,7 @@
 
 #include <stdio.h>
 
-#include "harvester.h"
+#include "control.h"
 #include "rpigpio/electronics.h"
 
 int main(int argc, char *argv[]){
