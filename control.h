@@ -4,8 +4,8 @@
  *
  */
 
-#ifndef _HARVESTER_H
-#define _HARVESTER_H
+#ifndef _CONTROL_H
+#define _CONTROL_H
 
 #define CYC_ABSORB 3
 #define CYC_DEHYDR 1
